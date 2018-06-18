@@ -69,13 +69,15 @@ namespace MsgService
                 {
                     client.Agent.ServiceDeregister(serviceId).Wait();
                 }
-            });
+            });
+
         }
 
         private void ConsulConfig(ConsulClientConfiguration c)
         {
             c.Address = new Uri("http://127.0.0.1:8500");
             c.Datacenter = "dc1";
-        }
+        }
+
     }
 }
